@@ -93,8 +93,8 @@ Create a `noise_pool/` directory and add noise samples (`.wav` files)
 Samples alreday uploaded
 ```
 noise_pool/
-├── noise_001.wav
-├── noise_002.wav
+├── oscili_test_16.wav
+├── pinkish16.wav
 └── ...
 ```
 
