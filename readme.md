@@ -85,7 +85,7 @@ This will automatically:
 6. Evaluate with BSS metrics
 7. Generate audio outputs
 
-### Option 2: Step-by-Step
+### Option 3: Step-by-Step
 
 #### Step 1: Prepare Noise Data
 
