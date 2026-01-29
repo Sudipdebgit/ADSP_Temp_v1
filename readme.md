@@ -271,7 +271,7 @@ Compare the separated audio files:
 ├── dataset_stft/                 # STFT representations
 ├── checkpoints/                  # Model checkpoints
 ├── inference_outputs/            # Generated audio files
-└── separated_output/             # Your separated audio
+└── separated_output/             # Custom separated audio
 ```
 
 ## Model Architecture
@@ -295,12 +295,6 @@ Default settings:
 - Epochs: 50
 - Learning rate: 1e-3
 - Optimizer: Adam
-
-### Troubleshooting
-
-Format Not Supported:
-- Install ffmpeg
-- Or convert to .wav first
 
 ## Citation
 
