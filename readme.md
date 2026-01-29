@@ -164,33 +164,33 @@ python bss_inference.py \
     --n_samples 5
 ```
 
-## Separate Your Own Audio
+## Separate Custom Audio
 
 ### Basic Usage
 
 ```bash
 # Separate any audio file
-python separate_my_audio.py your_audio.wav
+python separate_custom_audio.py your_audio.wav
 
 # Supported formats: wav, mp3, m4a, flac, ogg, etc.
-python separate_my_audio.py my_song.mp3
-python separate_my_audio.py podcast.m4a
+python separate_custom_audio.py my_song.mp3
+python separate_custom_audio.py podcast.m4a
 ```
 
 ### Advanced Options
 
 ```bash
 # Specify output directory
-python separate_my_audio.py audio.wav --output_dir my_results
+python separate_custom_audio.py audio.wav --output_dir my_results
 
 # Use different checkpoint
-python separate_my_audio.py audio.wav --checkpoint checkpoints/checkpoint_epoch_10.pth
+python separate_custom_audio.py audio.wav --checkpoint checkpoints/checkpoint_epoch_10.pth
 
-# Adjust chunk size (important for model trained on 4s clips)
-python separate_my_audio.py long_audio.mp3 --chunk_duration 4
+# Adjust chunk size (Model trained on 4s clips)
+python separate_custom_audio.py long_audio.mp3 --chunk_duration 4
 
 # Process short audio without chunking
-python separate_my_audio.py short_clip.wav --chunk_duration 0
+python separate_custom_audio.py short_clip.wav --chunk_duration 0
 ```
 
 ### Output Files
@@ -258,7 +258,7 @@ Compare the separated audio files:
 │
 ├── split_dataset.py              # Split data into train/val
 ├── bss_dataset.py                # PyTorch Dataset class
-├── bss_model.py                  # Model architecture (~25k params)
+├── bss_model.py                  # Model architecture (~137k params)
 ├── bss_train.py                  # Training script
 ├── bss_evaluate.py               # Evaluation with BSS metrics
 ├── bss_inference.py              # Generate audio outputs
