@@ -1,0 +1,47 @@
+[
+  {
+    "sample_id": "02818",
+    "mix_path": "inference_outputs/mix/mix_02818.wav",
+    "s1_predicted_path": "inference_outputs/s1_predicted/s1_pred_02818.wav",
+    "s2_predicted_path": "inference_outputs/s2_predicted/s2_pred_02818.wav",
+    "s1_true_path": "inference_outputs/s1_true/s1_true_02818.wav",
+    "s2_true_path": "inference_outputs/s2_true/s2_true_02818.wav",
+    "inference_time_ms": 1098.6239910125732
+  },
+  {
+    "sample_id": "02779",
+    "mix_path": "inference_outputs/mix/mix_02779.wav",
+    "s1_predicted_path": "inference_outputs/s1_predicted/s1_pred_02779.wav",
+    "s2_predicted_path": "inference_outputs/s2_predicted/s2_pred_02779.wav",
+    "s1_true_path": "inference_outputs/s1_true/s1_true_02779.wav",
+    "s2_true_path": "inference_outputs/s2_true/s2_true_02779.wav",
+    "inference_time_ms": 858.6623668670654
+  },
+  {
+    "sample_id": "02299",
+    "mix_path": "inference_outputs/mix/mix_02299.wav",
+    "s1_predicted_path": "inference_outputs/s1_predicted/s1_pred_02299.wav",
+    "s2_predicted_path": "inference_outputs/s2_predicted/s2_pred_02299.wav",
+    "s1_true_path": "inference_outputs/s1_true/s1_true_02299.wav",
+    "s2_true_path": "inference_outputs/s2_true/s2_true_02299.wav",
+    "inference_time_ms": 941.4587020874023
+  },
+  {
+    "sample_id": "02481",
+    "mix_path": "inference_outputs/mix/mix_02481.wav",
+    "s1_predicted_path": "inference_outputs/s1_predicted/s1_pred_02481.wav",
+    "s2_predicted_path": "inference_outputs/s2_predicted/s2_pred_02481.wav",
+    "s1_true_path": "inference_outputs/s1_true/s1_true_02481.wav",
+    "s2_true_path": "inference_outputs/s2_true/s2_true_02481.wav",
+    "inference_time_ms": 927.4487495422363
+  },
+  {
+    "sample_id": "01092",
+    "mix_path": "inference_outputs/mix/mix_01092.wav",
+    "s1_predicted_path": "inference_outputs/s1_predicted/s1_pred_01092.wav",
+    "s2_predicted_path": "inference_outputs/s2_predicted/s2_pred_01092.wav",
+    "s1_true_path": "inference_outputs/s1_true/s1_true_01092.wav",
+    "s2_true_path": "inference_outputs/s2_true/s2_true_01092.wav",
+    "inference_time_ms": 855.1523685455322
+  }
+]
