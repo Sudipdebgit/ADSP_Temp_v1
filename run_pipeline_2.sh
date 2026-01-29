@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Complete BSS Training and Evaluation Pipeline
-# This script runs all steps from data generation to inference
+# This script runs all steps from evaluation to inference
 
 set -e  # Exit on error
 
@@ -18,9 +18,9 @@ CHECKPOINT_DIR="checkpoints"
 INFERENCE_DIR="inference_outputs"
 
 NUM_MIXES=3000
-NUM_EPOCHS=5
-BATCH_SIZE=4  # Very small for CPU/low memory
-SUPERVISED_RATIO=0.5  # Change to 0.5 for semi-supervised (50% labeled)
+NUM_EPOCHS=50
+BATCH_SIZE=4  # Choose this because of CPU/Limitations
+SUPERVISED_RATIO=0.5  # Changed to 0.5 for semi-supervised (50% labeled)
 N_SAMPLES_EVAL=20  # Reduced for faster evaluation
 N_SAMPLES_INFERENCE=5  # Reduced for faster inference
 
