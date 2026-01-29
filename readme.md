@@ -69,6 +69,12 @@ Download from https://ffmpeg.org/download.html
 chmod +x run_pipeline.sh
 ./run_pipeline.sh
 ```
+### Option 2: Run Only Evaluation Part
+
+```bash
+chmod +x run_pipeline_2.sh
+./run_pipeline.sh
+```
 
 This will automatically:
 1. Download LibriSpeech speech data
