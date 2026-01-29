@@ -14,12 +14,12 @@ This project implements:
 
 ## Features
 
-- ✅ Train on 4-second audio clips
-- ✅ Separate speech from noise/music
-- ✅ Process audio of any length (automatic chunking with overlap)
-- ✅ Support for multiple audio formats (wav, mp3, m4a, flac, ogg)
-- ✅ Real-time factor monitoring
-- ✅ Complete end-to-end timing breakdown
+- Train on 4-second audio clips
+- Separate speech from noise/music
+- Process audio of any length (automatic chunking with overlap)
+- Support for multiple audio formats (wav, mp3, m4a, flac, ogg)
+- Real-time factor monitoring
+- Complete end-to-end timing breakdown
 
 ## Requirements
 
