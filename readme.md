@@ -1,4 +1,4 @@
-# Speech-Noise Separation using Semi-Supervised BSS
+# Speech-Noise/Music Separation using Semi-Supervised BSS
 
 A complete pipeline for training a semi-supervised blind source separation (BSS) model to separate speech from noise/music using STFT magnitude spectrograms.
 
