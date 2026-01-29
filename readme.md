@@ -73,7 +73,7 @@ chmod +x run_pipeline.sh
 
 ```bash
 chmod +x run_pipeline_2.sh
-./run_pipeline.sh
+./run_pipeline_2.sh
 ```
 
 This will automatically:
@@ -153,7 +153,6 @@ python bss_evaluate.py \
     --output evaluation_results.json \
     --n_samples 25
 ```
-
 #### Step 7: Generate Audio Outputs
 
 ```bash
