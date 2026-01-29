@@ -131,7 +131,7 @@ python split_dataset.py \
 #### Step 5: Train Model
 
 ```bash
-# Fully supervised (100% labeled data)
+# Semi-supervised (50% labeled data)
 python bss_train.py \
     --train_meta dataset_stft/train_meta.jsonl \
     --val_meta dataset_stft/val_meta.jsonl \
