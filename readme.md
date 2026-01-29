@@ -5,7 +5,7 @@ A complete pipeline for training a semi-supervised blind source separation (BSS)
 ## Overview
 
 This project implements:
-- CNN-based architecture (~127k parameters) for source separation
+- CNN-based architecture (~137k parameters) for source separation
 - Semi-supervised learning (supports both labeled and unlabeled data)
 - STFT-based processing with magnitude and phase
 - Comprehensive evaluation with SIR, SAR, SDR metrics
@@ -37,7 +37,7 @@ See `requirements.txt` for complete list.
 ### 1. Clone/Download the Project
 
 ```bash
-cd your_project_directory
+cd project_directory
 ```
 
 ### 2. Install Dependencies
@@ -89,8 +89,8 @@ This will automatically:
 
 #### Step 1: Prepare Noise Data
 
-Create a `noise_pool/` directory and add your noise samples (`.wav` files):
-
+Create a `noise_pool/` directory and add noise samples (`.wav` files) 
+Samples alreday uploaded
 ```
 noise_pool/
 ├── noise_001.wav
@@ -200,49 +200,53 @@ After separation, you'll get 3 files:
 - `yourfile_speech.wav` - Separated speech
 - `yourfile_noise_music.wav` - Separated noise/music/background
 
-### Example Output
+### Output
 
 ```
 PROCESSING SUMMARY
 ============================================================
-Audio Loading:           125.34 ms
-Audio -> STFT:            45.67 ms
-Model Inference:         936.56 ms
-ISTFT -> Audio:          144.25 ms
-------------------------------------------------------------
-Total Processing:       1251.82 ms
-Audio Duration:            5.23 s
-Real-time Factor:         4.18x
+EVALUATION RESULTS
 ============================================================
+
+SDR: 11.49 ± 4.08 dB
+SIR: 14.63 ± 4.50 dB
+SAR: 14.78 ± 3.71 dB
+
+           TIMING BREAKDOWN (End-to-End Pipeline)           
+------------------------------------------------------------
+Audio -> STFT:           47.45 ms
+Model Inference:       1063.68 ms
+ISTFT -> Audio:         153.76 ms
+------------------------------------------------------------
+Total Processing:      1264.89 ± 362.35 ms
+============================================================
+
 ```
 
-## Understanding the Results
+## Results
 
 ### BSS Metrics
 
-- SDR (Signal-to-Distortion Ratio): Overall separation quality
-  - Higher is better (typically 5-15 dB)
+- SDR (Signal-to-Distortion Ratio):    ```11.49 ± 4.08 dB```
   
-- SIR (Signal-to-Interference Ratio): How well sources are separated
-  - Higher is better (typically 10-20 dB)
+- SIR (Signal-to-Interference Ratio):    ```14.63 ± 4.50 dB```
   
-- SAR (Signal-to-Artifacts Ratio): Artifacts introduced by separation
-  - Higher is better (typically 10-20 dB)
+- SAR (Signal-to-Artifacts Ratio):    ```14.78 ± 3.71 dB```
+
 
 ### Timing Breakdown
 
 - Audio -> STFT: Time to convert audio to frequency domain
 - Model Inference: Time for neural network to process
 - ISTFT -> Audio: Time to convert back to time domain
-- Total Processing: Complete end-to-end time
-- Real-time Factor: How much faster than real-time (higher is better)
+- Total Processing: Complete end-to-end time : ```1.5 second (Approx)```
 
 ### Listening to Results
 
 Compare the separated audio files:
 1. Original mix (speech + noise)
-2. Separated speech (cleaner speech)
-3. Separated noise/music (background removed)
+2. Separated speech
+3. Separated noise/music
 
 ## Project Structure
 
@@ -275,7 +279,7 @@ Compare the separated audio files:
 The model uses:
 - Input: 2-channel STFT magnitude (257 freq bins)
 - Architecture: CNN with dilated residual blocks
-- Parameters: ~127,000 trainable parameters
+- Parameters: 137,794 trainable parameters
 - Output: 2 separated source magnitudes (speech + noise)
 
 Channel progression: 2 → 34 → 40 → 42 → 40 → 34 → 32 → 4
@@ -292,36 +296,11 @@ Default settings:
 - Learning rate: 1e-3
 - Optimizer: Adam
 
-## Tips and Best Practices
-
-### For Best Separation Quality
-
-1. Use chunk size close to training length (4-5 seconds)
-2. Ensure good quality training data (clean speech + diverse noise)
-3. Train for sufficient epochs (30-50 epochs)
-4. Use validation set to monitor overfitting
-
-### For Processing Long Audio
-
-1. Use 4-5 second chunks (matches training data)
-2. Enable overlap (25% overlap is good)
-3. Be patient with very long files (>10 minutes)
-
 ### Troubleshooting
 
 Format Not Supported:
 - Install ffmpeg
 - Or convert to .wav first
-
-## Performance Benchmarks
-
-Typical performance (CPU):
-- 4-second audio: ~1 second processing time
-- 1-minute audio: ~15 seconds processing time
-- Real-time factor: 3-5x on modern CPU
-
-With GPU:
-- Real-time factor: 10-20x or higher
 
 ## Citation
 
