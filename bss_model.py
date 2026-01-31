@@ -8,7 +8,6 @@ class ImprovedBSS(nn.Module):
     Improved CNN-based model for blind source separation.
     Balanced between performance and memory efficiency.
     Uses dilated convolutions and residual connections.
-    Modified to have ~25,000 parameters.
     """
     
     def __init__(self, n_channels=2, n_freq=257, n_sources=2):
